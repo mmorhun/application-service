@@ -36,16 +36,16 @@ import (
 
 	ctrl "sigs.k8s.io/controller-runtime"
 
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
 	routev1 "github.com/openshift/api/route/v1"
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
 	taskrunapi "github.com/tektoncd/pipeline/pkg/apis/pipeline/v1beta1"
 	triggersapi "github.com/tektoncd/triggers/pkg/apis/triggers/v1alpha1"
 
-	"github.com/redhat-appstudio/application-service/gitops/testutils"
-	"github.com/redhat-appstudio/application-service/pkg/devfile"
-	github "github.com/redhat-appstudio/application-service/pkg/github"
-	"github.com/redhat-appstudio/application-service/pkg/spi"
-	"github.com/redhat-appstudio/application-service/pkg/util/ioutils"
+	"github.com/mmorhun/application-service/gitops/testutils"
+	"github.com/mmorhun/application-service/pkg/devfile"
+	github "github.com/mmorhun/application-service/pkg/github"
+	"github.com/mmorhun/application-service/pkg/spi"
+	"github.com/mmorhun/application-service/pkg/util/ioutils"
 	//+kubebuilder:scaffold:imports
 )
 

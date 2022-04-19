@@ -20,9 +20,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	"github.com/redhat-appstudio/application-service/gitops/testutils"
-	"github.com/redhat-appstudio/application-service/pkg/util/ioutils"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	"github.com/mmorhun/application-service/gitops/testutils"
+	"github.com/mmorhun/application-service/pkg/util/ioutils"
 	"github.com/spf13/afero"
 )
 

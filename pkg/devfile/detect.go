@@ -21,7 +21,7 @@ import (
 	"path"
 	"reflect"
 
-	"github.com/redhat-appstudio/application-service/pkg/util"
+	"github.com/mmorhun/application-service/pkg/util"
 	"github.com/redhat-developer/alizer/go/pkg/apis/language"
 	"github.com/redhat-developer/alizer/go/pkg/apis/recognizer"
 )

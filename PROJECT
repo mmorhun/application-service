@@ -5,7 +5,7 @@ plugins:
   manifests.sdk.operatorframework.io/v2: {}
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: application-service
-repo: github.com/redhat-appstudio/application-service
+repo: github.com/mmorhun/application-service
 resources:
 - api:
     crdVersion: v1
@@ -14,7 +14,7 @@ resources:
   domain: redhat.com
   group: appstudio
   kind: Application
-  path: github.com/redhat-appstudio/application-service/api/v1alpha1
+  path: github.com/mmorhun/application-service/api/v1alpha1
   version: v1alpha1
   webhooks:
     defaulting: true
@@ -27,7 +27,7 @@ resources:
   domain: redhat.com
   group: appstudio
   kind: Component
-  path: github.com/redhat-appstudio/application-service/api/v1alpha1
+  path: github.com/mmorhun/application-service/api/v1alpha1
   version: v1alpha1
   webhooks:
     defaulting: true
@@ -40,6 +40,6 @@ resources:
   domain: redhat.com
   group: appstudio
   kind: ComponentDetectionQuery
-  path: github.com/redhat-appstudio/application-service/api/v1alpha1
+  path: github.com/mmorhun/application-service/api/v1alpha1
   version: v1alpha1
 version: "3"

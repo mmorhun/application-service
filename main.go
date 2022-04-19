@@ -39,12 +39,12 @@ import (
 	triggersapi "github.com/tektoncd/triggers/pkg/apis/triggers/v1alpha1"
 
 	"github.com/google/go-github/v41/github"
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	"github.com/redhat-appstudio/application-service/controllers"
-	"github.com/redhat-appstudio/application-service/gitops"
-	"github.com/redhat-appstudio/application-service/pkg/devfile"
-	"github.com/redhat-appstudio/application-service/pkg/spi"
-	"github.com/redhat-appstudio/application-service/pkg/util/ioutils"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	"github.com/mmorhun/application-service/controllers"
+	"github.com/mmorhun/application-service/gitops"
+	"github.com/mmorhun/application-service/pkg/devfile"
+	"github.com/mmorhun/application-service/pkg/spi"
+	"github.com/mmorhun/application-service/pkg/util/ioutils"
 	//+kubebuilder:scaffold:imports
 )
 

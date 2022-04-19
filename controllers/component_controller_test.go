@@ -26,10 +26,10 @@ import (
 	"github.com/devfile/api/v2/pkg/attributes"
 	data "github.com/devfile/library/pkg/devfile/parser/data"
 	"github.com/devfile/library/pkg/devfile/parser/data/v2/common"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	devfile "github.com/mmorhun/application-service/pkg/devfile"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	devfile "github.com/redhat-appstudio/application-service/pkg/devfile"
 
 	corev1 "k8s.io/api/core/v1"
 
@@ -741,7 +741,7 @@ var _ = Describe("Component controller", func() {
 					DisplayName: DisplayName,
 					Description: Description,
 					GitOpsRepository: appstudiov1alpha1.ApplicationGitRepository{
-						URL: "https://github.com/redhat-appstudio-appdata/!@#$%U%I$F    DFDN##",
+						URL: "https://github.com/mmorhun-appdata/!@#$%U%I$F    DFDN##",
 					},
 				},
 			}

@@ -22,8 +22,8 @@ import (
 	parser "github.com/devfile/library/pkg/devfile/parser"
 	data "github.com/devfile/library/pkg/devfile/parser/data"
 
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	"github.com/redhat-appstudio/application-service/pkg/util"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	"github.com/mmorhun/application-service/pkg/util"
 )
 
 const (

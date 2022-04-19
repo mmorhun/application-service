@@ -39,12 +39,12 @@ import (
 	"github.com/go-logr/logr"
 	routev1 "github.com/openshift/api/route/v1"
 
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	"github.com/redhat-appstudio/application-service/gitops"
-	devfile "github.com/redhat-appstudio/application-service/pkg/devfile"
-	"github.com/redhat-appstudio/application-service/pkg/spi"
-	"github.com/redhat-appstudio/application-service/pkg/util"
-	"github.com/redhat-appstudio/application-service/pkg/util/ioutils"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	"github.com/mmorhun/application-service/gitops"
+	devfile "github.com/mmorhun/application-service/pkg/devfile"
+	"github.com/mmorhun/application-service/pkg/spi"
+	"github.com/mmorhun/application-service/pkg/util"
+	"github.com/mmorhun/application-service/pkg/util/ioutils"
 
 	"github.com/spf13/afero"
 )

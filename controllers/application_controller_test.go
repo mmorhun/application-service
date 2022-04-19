@@ -20,10 +20,10 @@ import (
 	"context"
 	"time"
 
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	devfile "github.com/mmorhun/application-service/pkg/devfile"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	devfile "github.com/redhat-appstudio/application-service/pkg/devfile"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/types"
 	//+kubebuilder:scaffold:imports

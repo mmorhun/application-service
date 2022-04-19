@@ -21,7 +21,7 @@ import (
 	"io"
 	"path/filepath"
 
-	"github.com/redhat-appstudio/application-service/pkg/devfile"
+	"github.com/mmorhun/application-service/pkg/devfile"
 	"github.com/redhat-appstudio/service-provider-integration-scm-file-retriever/gitfile"
 )
 

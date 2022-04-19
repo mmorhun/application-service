@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/redhat-appstudio/application-service/pkg/util"
+	"github.com/mmorhun/application-service/pkg/util"
 )
 
 func TestAnalyzeAndDetectDevfile(t *testing.T) {

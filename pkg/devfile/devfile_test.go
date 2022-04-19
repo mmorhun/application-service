@@ -25,8 +25,8 @@ import (
 	"github.com/devfile/api/v2/pkg/devfile"
 	data "github.com/devfile/library/pkg/devfile/parser/data"
 	v2 "github.com/devfile/library/pkg/devfile/parser/data/v2"
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	"github.com/redhat-appstudio/application-service/pkg/util"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	"github.com/mmorhun/application-service/pkg/util"
 )
 
 func TestParseDevfileModel(t *testing.T) {

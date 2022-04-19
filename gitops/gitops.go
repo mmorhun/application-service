@@ -20,7 +20,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
 	"github.com/spf13/afero"
 )
 

@@ -1,4 +1,4 @@
-module github.com/redhat-appstudio/application-service
+module github.com/mmorhun/application-service
 
 go 1.16
 

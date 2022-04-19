@@ -32,9 +32,9 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/reconcile"
 	"sigs.k8s.io/yaml"
 
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	devfile "github.com/redhat-appstudio/application-service/pkg/devfile"
-	github "github.com/redhat-appstudio/application-service/pkg/github"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	devfile "github.com/mmorhun/application-service/pkg/devfile"
+	github "github.com/mmorhun/application-service/pkg/github"
 )
 
 // ApplicationReconciler reconciles a Application object

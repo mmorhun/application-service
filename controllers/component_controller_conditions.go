@@ -23,7 +23,7 @@ import (
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
 )
 
 func (r *ComponentReconciler) SetCreateConditionAndUpdateCR(ctx context.Context, component *appstudiov1alpha1.Component, createError error) {

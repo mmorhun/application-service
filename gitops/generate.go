@@ -18,16 +18,16 @@ package gitops
 import (
 	"path/filepath"
 
+	appstudiov1alpha1 "github.com/mmorhun/application-service/api/v1alpha1"
+	"github.com/mmorhun/application-service/gitops/resources"
 	routev1 "github.com/openshift/api/route/v1"
-	appstudiov1alpha1 "github.com/redhat-appstudio/application-service/api/v1alpha1"
-	"github.com/redhat-appstudio/application-service/gitops/resources"
 	"github.com/spf13/afero"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"
 
-	yaml "github.com/redhat-appstudio/application-service/gitops/yaml"
+	yaml "github.com/mmorhun/application-service/gitops/yaml"
 )
 
 const (
