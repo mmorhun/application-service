@@ -1036,7 +1036,7 @@ func TestGeneratePACRepository(t *testing.T) {
 			repoUrl: "https://github.com/user/test-component-repository",
 			pacConfig: map[string][]byte{
 				"github.token": []byte("ghp_token"),
-				"gitlab.token": []byte("token"),
+				"gitlab.token": []byte("glpat-token"),
 			},
 			expectedGitProviderConfig: &pacv1alpha1.GitProvider{
 				Secret: &pacv1alpha1.Secret{
@@ -1047,6 +1047,7 @@ func TestGeneratePACRepository(t *testing.T) {
 					Name: PipelinesAsCodeWebhooksSecretName,
 					Key:  GetWebhookSecretKeyForComponent(getComponent("https://github.com/user/test-component-repository")),
 				},
+				URL: "https://github.com",
 			},
 		},
 		{
@@ -1054,7 +1055,7 @@ func TestGeneratePACRepository(t *testing.T) {
 			repoUrl: "https://gitlab.com/user/test-component-repository",
 			pacConfig: map[string][]byte{
 				"github.token": []byte("ghp_token"),
-				"gitlab.token": []byte("token"),
+				"gitlab.token": []byte("glpat-token"),
 			},
 			expectedGitProviderConfig: &pacv1alpha1.GitProvider{
 				Secret: &pacv1alpha1.Secret{
@@ -1065,6 +1066,7 @@ func TestGeneratePACRepository(t *testing.T) {
 					Name: PipelinesAsCodeWebhooksSecretName,
 					Key:  GetWebhookSecretKeyForComponent(getComponent("https://gitlab.com/user/test-component-repository")),
 				},
+				URL: "https://gitlab.com",
 			},
 		},
 		{
@@ -1073,7 +1075,7 @@ func TestGeneratePACRepository(t *testing.T) {
 			pacConfig: map[string][]byte{
 				PipelinesAsCode_githubAppIdKey:   []byte("12345"),
 				PipelinesAsCode_githubPrivateKey: []byte("private-key"),
-				"gitlab.token":                   []byte("token"),
+				"gitlab.token":                   []byte("glpat-token"),
 			},
 			expectedGitProviderConfig: &pacv1alpha1.GitProvider{
 				Secret: &pacv1alpha1.Secret{
@@ -1084,6 +1086,7 @@ func TestGeneratePACRepository(t *testing.T) {
 					Name: PipelinesAsCodeWebhooksSecretName,
 					Key:  GetWebhookSecretKeyForComponent(getComponent("https://gitlab.com/user/test-component-repository")),
 				},
+				URL: "https://gitlab.com",
 			},
 		},
 	}
@@ -1346,7 +1349,7 @@ func TestIsPaCApplicationConfigured(t *testing.T) {
 			config: map[string][]byte{
 				PipelinesAsCode_githubAppIdKey:   []byte("12345"),
 				PipelinesAsCode_githubPrivateKey: []byte("private-key"),
-				"gitlab.token":                   []byte("token"),
+				"gitlab.token":                   []byte("glpat-token"),
 			},
 			want: false,
 		},

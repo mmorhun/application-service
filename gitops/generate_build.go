@@ -480,6 +480,15 @@ func GeneratePACRepository(component appstudiov1alpha1.Component, config map[str
 				Key:  GetWebhookSecretKeyForComponent(component),
 			},
 		}
+
+		switch gitProvider {
+		case "github":
+			gitProviderConfig.URL = "https://github.com"
+		case "gitlab":
+			gitProviderConfig.URL = "https://gitlab.com"
+		case "bitbucket":
+			gitProviderConfig.URL = "https://bitbucket.org"
+		}
 	}
 
 	repository := &pacv1alpha1.Repository{
