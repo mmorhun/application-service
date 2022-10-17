@@ -98,6 +98,7 @@ func main() {
 	setupLog = setupLog.WithValues("api-export-name", apiExportName)
 
 	var mgr ctrl.Manager
+	var localClient client.Client
 	var err error
 	options := ctrl.Options{
 		Scheme:                 scheme,
@@ -123,6 +124,11 @@ func main() {
 			setupLog.Error(err, "unable to start cluster aware manager")
 			os.Exit(1)
 		}
+
+		localClient, err = client.New(ctrl.GetConfigOrDie(), client.Options{Scheme: runtime.NewScheme()})
+		if err != nil {
+			setupLog.Error(err, "error creating local client")
+		}
 	} else {
 		setupLog.Info("The apis.kcp.dev group is not present - creating standard manager")
 		mgr, err = ctrl.NewManager(restConfig, options)
@@ -130,6 +136,8 @@ func main() {
 			setupLog.Error(err, "unable to start manager")
 			os.Exit(1)
 		}
+
+		localClient = mgr.GetClient()
 	}
 
 	if err := routev1.AddToScheme(mgr.GetScheme()); err != nil {
@@ -177,6 +185,7 @@ func main() {
 	}
 	if err = (&controllers.ComponentReconciler{
 		Client:          mgr.GetClient(),
+		LocalClient:     localClient,
 		Scheme:          mgr.GetScheme(),
 		Log:             ctrl.Log.WithName("controllers").WithName("Component"),
 		Executor:        gitopsgen.NewCmdExecutor(),
